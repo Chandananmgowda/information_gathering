@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nmap Automation Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Nmap Automation Tool</h1>
+        <form id="scan-form">
+            <label for="ip">IP Address:</label>
+            <input type="text" id="ip" name="ip" required>
+            <label for="scan_type">Scan Type:</label>
+            <select id="scan_type" name="scan_type" required>
+                <option value="1">SYN ACK Scan</option>
+                <option value="2">UDP Scan</option>
+                <option value="3">Comprehensive Scan</option>
+            </select>
+            <button type="submit">Start Scan</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
